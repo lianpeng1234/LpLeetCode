@@ -1,2 +1,2 @@
 # LpLeetCode
-LeetCode 联系题
+LeetCode 练习题
