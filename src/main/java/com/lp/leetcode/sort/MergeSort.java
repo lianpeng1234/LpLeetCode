@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class MergeSort {
 
     public static void main(String[] args) {
-        int[] a = new int[]{3, 2, 7, 5, 4, 1, 1};//3, 2, 7, 5, 4, 1
+        int[] a = new int[]{6,8,7,6,3,5,9,4};//3, 2, 7, 5, 4, 1
         int[] c = split(a, 0, a.length - 1);
 
 

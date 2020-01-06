@@ -12,7 +12,7 @@ public class QuickSort {有问题
     }
 
     private static void quickSort(int[] a, int begin, int end) {
-        if (begin >= end || end <= 0) {
+        if (begin >= end) {
             return;
         }
         int tmp = a[end];
