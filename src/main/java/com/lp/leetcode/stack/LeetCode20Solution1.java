@@ -3,7 +3,7 @@ package com.lp.leetcode.stack;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LeetCode20L1 {
+public class LeetCode20Solution1 {
 
     public boolean isValid(String s) {
         char[] chars = s.toCharArray();

@@ -1,6 +1,6 @@
 package com.lp.leetcode.link;
 
-public class LeetCode19 {
+public class LeetCode19Solution1 {
 
     //    1->2->3->4->5, 和 n = 2
     public ListNode removeNthFromEnd(ListNode head, int n) {

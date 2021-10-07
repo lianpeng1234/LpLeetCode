@@ -8,11 +8,11 @@ public class LeetCode11 {
 
     public static void main(String[] args) {
         int[] height = new int[]{2, 3, 4, 5, 18, 17, 6};
-        int lp = xxx(height);
+        int lp = area(height);
         System.out.println(lp);
     }
 
-    public static int xxx(int[] height) {
+    public static int area(int[] height) {
         int length = height.length;
         int beforeIndex = 0;
         int afterIndex = length - 1;

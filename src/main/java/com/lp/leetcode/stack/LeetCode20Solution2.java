@@ -3,7 +3,7 @@ package com.lp.leetcode.stack;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LeetCode20L2 {
+public class LeetCode20Solution2 {
 
     public static void main(String[] args) {
         String s = "()";
