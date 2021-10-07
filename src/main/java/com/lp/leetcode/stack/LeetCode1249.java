@@ -1,5 +1,8 @@
 package com.lp.leetcode.stack;
 
+/**
+ * 移除无效括号
+ */
 public class LeetCode1249 {
 
     public static void main(String[] args) {
