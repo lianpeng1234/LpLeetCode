@@ -1,32 +1,23 @@
 package com.lp.leetcode.sort;
 
-import java.util.Arrays;
-
-// 核心思想，将选择待排序的数组区分为已排序区间和未排序区间，选择未排序区间的第一个元素，在已排序区间找到合适的位置并插入
 public class InsertSort {
 
-    public static void main(String[] args) {
-        int[] a = new int[]{6, 3, 4, 3};
-        System.out.println("原始数据：" + Arrays.toString(a));
-
-        int index = 0;// 已经排序区间的末尾下标
-        int tmp;
-        for (int i = 1; i < a.length; i++) {
-            if (a[index] > a[i]) {//  升序排列
-                for (int j = i; j > 0; j--) {
-                    if (a[j] < a[j - 1]) {//  升序排列，并保证是稳定排序
-                        // 交换数据
-                        tmp = a[j];
-                        a[j] = a[j - 1];
-                        a[j - 1] = tmp;
+    // 代码中演示的排序为 降序（从小到大）
+    public void sort(int[] nums) {
+        int orderlyEndIndex = 0;
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[orderlyEndIndex] > nums[i]) {// 已排序区间 最后一个元素 比 未排序区间的 第一个元素大
+                for (int j = i; j > 0; j--) {// 从已排序区间末尾开始向前遍历
+                    if (nums[j] < nums[j - 1]) { // 遍历到的元素如果比 X 大则交换位置
+                        int tmp = nums[j];
+                        nums[j] = nums[j-1];
+                        nums[j-1] = tmp;
                     }
                 }
             }
-            System.out.println("第" + i + "步：   " + Arrays.toString(a));
-            index = i;
+            orderlyEndIndex = i;// 已排序区间的末尾临界数组下标完后移动到 i
         }
-
-
     }
+
 
 }

@@ -1,7 +1,8 @@
 package com.lp.leetcode.link;
 
-import java.util.List;
-
+/**
+ * 链表的中间结点
+ */
 public class LeetCode876 {
 
     public ListNode middleNode(ListNode head) {
