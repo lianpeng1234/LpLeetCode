@@ -20,7 +20,7 @@ public class BubbleSort {
         for (int i = 0; i < nums.length; i++) {
             boolean exchange = false;
             for (int j = 0; j < nums.length - i - 1; j++) {
-                if (nums[j] > nums[j + 1]) {
+                if (nums[j] > nums[j + 1]) {// 将数组中比较大的元素，冒泡到数组的后面
                     int tmp = nums[j + 1];
                     nums[j + 1] = nums[j];
                     nums[j] = tmp;

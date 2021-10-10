@@ -25,7 +25,6 @@ public class SelectSort {
             nums[i] = nums[minIndex];
             nums[minIndex] = tmp;
         }
-
     }
 
 }
