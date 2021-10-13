@@ -25,7 +25,6 @@ public class BranchFind3Variant {
                 low = center + 1;
             }
         }
-
         return -1;
     }
 }

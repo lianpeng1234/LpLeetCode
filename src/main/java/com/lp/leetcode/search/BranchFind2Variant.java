@@ -26,7 +26,6 @@ public class BranchFind2Variant {
                 low = center + 1;
             }
         }
-
         return -1;
     }
 
