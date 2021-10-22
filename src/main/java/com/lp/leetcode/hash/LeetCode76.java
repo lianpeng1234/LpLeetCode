@@ -58,7 +58,7 @@ public class LeetCode76 {
 
         }
 
-
+        return "";
     }
 
     private static HashMap<Integer, Integer> getMap(String t) {
