@@ -4,7 +4,6 @@ import java.util.HashMap;
 
 public class LeetCode5 {
 
-    没解出
     public String longestPalindrome(String s) {
         HashMap<Character, Integer> map = new HashMap<>();
         int startPos = 0;
