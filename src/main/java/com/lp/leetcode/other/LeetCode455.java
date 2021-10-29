@@ -1,13 +1,25 @@
-package com.lp.leetcode.search;
+package com.lp.leetcode.other;
 
-// 查找第一个大于等于给定值的元素
-public class BranchFind3Variant {
-    public static void main(String[] args) {
-        int[] a = new int[]{1, 4, 6, 8, 15, 15, 15, 19, 25, 29};
+import java.util.Arrays;
 
-        int index = branchFind(a, 21);
-        System.out.println(index);
-        System.out.println(a[index]);
+public class LeetCode455 {
+
+    public int findContentChildren(int[] g, int[] s) {
+        Arrays.sort(g);
+        Arrays.sort(s);
+
+        int count = 0;
+        for (int i = 0; i < g.length; i++) {
+            int eat = g[i];
+
+            int index = branchFind(s, eat);
+            if (index > -1) {
+                count++;
+                s[index] = -1;
+            }
+        }
+
+        return count;
     }
 
     private static int branchFind(int[] a, int value) {
@@ -27,4 +39,5 @@ public class BranchFind3Variant {
         }
         return -1;
     }
+
 }
