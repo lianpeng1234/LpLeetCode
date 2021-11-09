@@ -1,16 +1,19 @@
 package com.lp.leetcode.heap;
 
+import org.junit.Test;
+
 import java.util.*;
 
 public class LeetCode347 {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         int[] nums = new int[]{4, 1, -1, 2, -1, 2, 3};
         int k = 2;
         System.out.println(Arrays.toString(topKFrequent(nums, k)));
     }
 
-    public static int[] topKFrequent(int[] nums, int k) {
+    public int[] topKFrequent(int[] nums, int k) {
         HashMap<Integer, Integer> map = new HashMap();
         for (int i : nums) {
             int count = map.getOrDefault(i, 0);
