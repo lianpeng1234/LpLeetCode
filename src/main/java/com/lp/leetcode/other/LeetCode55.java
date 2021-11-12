@@ -5,31 +5,36 @@ import java.util.regex.Matcher;
 public class LeetCode55 {
 
     public static void main(String[] args) {
-        int[] nums = new int[]{3, 2, 1, 0};
+        int[] nums = new int[]{2, 3, 1, 1, 1, 4};
         System.out.println(canJump(nums));
     }
 
     public static boolean canJump(int[] nums) {
-        return canJump(nums, 0);
-    }
+        int pos = 0;
+        while (pos <= nums.length - 1) {
+            int endPos = pos + nums[pos];
+            if (endPos >= nums.length - 1) {
+                return true;
+            }
 
-    private static boolean canJump(int[] nums, int pos) {
-        while (true) {
+            int maxDistance = 0;
+            for (int i = pos + 1; i <= endPos; i++) {
+                int xxx = i + nums[i];
+                if (xxx > maxDistance) {
+                    pos = i;
+                    maxDistance = xxx;
+                }
+            }
+
             if (pos >= nums.length - 1) {
                 return true;
             }
             if (nums[pos] == 0) {
                 return false;
             }
-            int end = Math.min(nums.length - 1, nums[pos] + pos);
-            for (int j = end; j >= pos + 1 && j < nums.length; j--) {
-                boolean can = canJump(nums, j);
-                if (can) {
-                    return true;
-                }
-            }
-            return false;
         }
+        return false;
     }
+
 
 }
